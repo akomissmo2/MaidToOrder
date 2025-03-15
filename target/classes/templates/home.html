@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maid-to-Order</title>
+    <head>
+        <title>Home Page</title>
+    </head>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+        }
+        .container {
+            text-align: center;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 10px;
+            shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+        }
+        h1 {
+            color: #28a745;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #343a40;
+            font-size: 18px;
+        }
+        .cta-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #28a745;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .cta-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to Maid-to-Order!</h1>
+    <p>Your one-stop solution for professional and reliable maid services.</p>
+    <a href="/services" class="cta-button">Explore Services</a>
+    <a href="/maids" class="cta-button">View Maids</a> <!-- New Button -->
+</div>
+</body>
+</html>
