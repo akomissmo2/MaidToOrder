@@ -10,7 +10,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "customers")
-public class Customer {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,7 +26,7 @@ public class Customer {
     @Column(name = "phone_number", length = 15)
     private String phoneNumber;
 
-    @Column(name = "email", length = 100)
+    @Column(name = "email", length = 100, unique = true)
     private String email;
 
     @Column(name = "gender", length = 10)

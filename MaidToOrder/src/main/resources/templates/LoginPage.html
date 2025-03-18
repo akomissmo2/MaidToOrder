@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maid-to-Order Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #eac0bd;
+        }
+
+        .container {
+            display: flex;
+            width: 900px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-container {
+            width: 50%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container a {
+            font-size: 14px;
+            text-decoration: none;
+            color: #555;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #333;
+        }
+
+        .divider {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .maid-section {
+            width: 50%;
+            background: #f3b5b0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .maid-section h1 {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .maid-section img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="form-container">
+        <h2>Sign In</h2>
+        <form action="/login" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <a href="/forgotpassword">Forgot password?</a>
+            <button type="submit">Sign In</button>
+        </form>
+        <div class="divider">OR</div>
+        <button onclick="location.href='/register'">Register</button>
+        <a href="#">Want to be a maid? Apply Here!</a>
+        <div th:if="${error}" th:text="${error}" style="color: red;"></div>
+    </div>
+    <div class="maid-section">
+        <h1>MAID-TO-ORDER</h1>
+        <img th:src="@{/images/Yaya.png}" alt="Maid Image">
+    </div>
+</div>
+</body>
+</html>

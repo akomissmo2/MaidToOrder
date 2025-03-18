@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maid-To-Order</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fde8e8;
+      margin: 0;
+      padding: 0;
+    }
+    .sidebar {
+      width: 200px;
+      background-color: #f4c6c6;
+      height: 100vh;
+      position: fixed;
+      padding-top: 20px;
+    }
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #000;
+      margin: 10px;
+    }
+    .sidebar a.active {
+      background-color: white;
+      border-radius: 10px;
+    }
+    .content {
+      margin-left: 220px;
+      padding: 20px;
+      position: relative;
+    }
+    .header {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff8a8a;
+      text-shadow: 2px 2px 3px #ffb6b6;
+    }
+    .user-name {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-weight: bold;
+    }
+    .review-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+    .review-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      width: 45%;
+      margin: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .review-card img {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      margin-right: 15px;
+    }
+    .review-card h3 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .review-card p {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .review-card .reviewer {
+      font-size: 12px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .review-card .date {
+      font-size: 12px;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+<div class="sidebar">
+  <a href="/loginpage">LOG IN</a>
+  <a href="/dashboard">HOME</a>
+  <a href="/services">SERVICES</a>
+  <a href="/contactus">CONTACT US</a>
+  <a href="/reviews" class="active">REVIEWS</a>
+</div>
+<div class="content">
+  <div class="header">MAID-TO-ORDER</div>
+  <div class="review-container">
+    <div class="review-card">
+      <img th:src="@{/images/piattos.png}" alt="Reviewer Image">
+      <div>
+        <h3>QUALITY WORK! &#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+        <p>Kaka-move in lang namin ng asawa ko at pagod na pagod kami... Nalinis nung maid buong bahay namin habang kami naman ay nakapapahinga.</p>
+        <div class="reviewer">Mary Grace Piattos</div>
+        <div class="date">3/24/24</div>
+      </div>
+    </div>
+    <div class="review-card">
+      <img th:src="@{/images/martinluther.jpg}" alt="Reviewer Image">
+      <div>
+        <h3>Maayos maglaba &#9733;&#9733;&#9733;&#9733;&#9734;</h3>
+        <p>Maayos naman maglaba yung na hire ko kaso nakalimutan lang tanggalin sa saksak washing machine ko hehe.</p>
+        <div class="reviewer">Martin Luther</div>
+        <div class="date">1/5/25</div>
+      </div>
+    </div>
+    <div class="review-card">
+      <img th:src="@{/images/mangjuan.png}" alt="Reviewer Image">
+      <div>
+        <h3>Restaurant Quality Cooking! &#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+        <p>Grabe si manang like oh my god spam lang meron ako pero manang na mage niyang pasarapin ng sobra.</p>
+        <div class="reviewer">Juan Tamad</div>
+        <div class="date">8/2/24</div>
+      </div>
+    </div>
+    <div class="review-card">
+      <img th:src="@{/images/lolaamour.jpg}" alt="Reviewer Image">
+      <div>
+        <h3>GUMANDA GARDEN KO &#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+        <p>Medyo may katandaan na kasi ako at malalayo ang aking pamilya kaya di na maintiain ang garden... Salamat sa maid na na book ko.</p>
+        <div class="reviewer">Lola Amour</div>
+        <div class="date">7/21/23</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

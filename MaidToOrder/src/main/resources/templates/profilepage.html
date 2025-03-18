@@ -81,25 +81,7 @@
             margin-top: 5px;
             font-size: 14px;
         }
-        .services-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-        .service-card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-            width: 40%;
-            margin: 10px;
-            text-align: center;
-        }
-        .service-card h3 {
-            font-weight: bold;
-        }
-        .book-btn {
+        .edit-btn {
             background-color: black;
             color: white;
             padding: 10px;
@@ -107,40 +89,58 @@
             border-radius: 5px;
             cursor: pointer;
             margin-top: 10px;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        .logout-btn {
+            background-color: red;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            display: block;
+            width: 100%;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 <div class="sidebar">
-    <a href="/loginpage">LOG IN</a>
+    <a href="/profile" class="active">PROFILE</a>
     <a href="/dashboard">HOME</a>
-    <a href="/services" class="active">SERVICES</a>
+    <a href="/services">SERVICES</a>
     <a href="/contactus">CONTACT US</a>
     <a href="/reviews">REVIEWS</a>
 </div>
 <div class="content">
     <div class="header">MAID-TO-ORDER</div>
-    <div class="services-container">
-        <div class="service-card">
-            <h3>THE CHEF</h3>
-            <p>Hire one of our maids to cook for you (They will use your own ingredients and equipment)</p>
-            <button class="book-btn">PLEASE LOG IN/REGISTER</button>
-        </div>
-        <div class="service-card">
-            <h3>THE LAUNDRESS</h3>
-            <p>Hire one of our maids to do the laundry for you (They will use your equipment)</p>
-            <button class="book-btn">PLEASE LOG IN/REGISTER</button>
-        </div>
-        <div class="service-card">
-            <h3>THE MAID</h3>
-            <p>Hire one of our maids to do general home cleaning (They will use your equipment)</p>
-            <button class="book-btn">PLEASE LOG IN/REGISTER</button>
-        </div>
-        <div class="service-card">
-            <h3>THE GARDENER</h3>
-            <p>Hire one of our maids to take care of your green spaces (They will use your equipment)</p>
-            <button class="book-btn">PLEASE LOG IN/REGISTER</button>
-        </div>
+    <div class="profile-container">
+        <h2 th:text="${user.name}"></h2>
+        <form action="/profile" method="post">
+            <div class="profile-item">
+                <label>Email</label>
+                <input type="email" name="email" th:value="${user.email}" required>
+            </div>
+            <div class="profile-item">
+                <label>Mobile Number</label>
+                <input type="text" name="phoneNumber" th:value="${user.phoneNumber}" required>
+            </div>
+            <div class="profile-item">
+                <label>Address</label>
+                <input type="text" name="address" th:value="${user.address}" required>
+            </div>
+            <div class="profile-item">
+                <label>Password</label>
+                <input type="password" name="password" th:value="${user.password}" required>
+            </div>
+            <button type="submit" class="edit-btn">Edit</button>
+        </form>
+        <form action="/logout" method="get">
+            <button type="submit" class="logout-btn">Logout</button>
+        </form>
     </div>
 </div>
 </body>

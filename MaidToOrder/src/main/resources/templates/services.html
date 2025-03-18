@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maid-To-Order</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fde8e8;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #f4c6c6;
+            height: 100vh;
+            position: fixed;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #000;
+            margin: 10px;
+        }
+        .sidebar a.active {
+            background-color: white;
+            border-radius: 10px;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+            position: relative;
+        }
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff8a8a;
+            text-shadow: 2px 2px 3px #ffb6b6;
+        }
+        .user-name {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-weight: bold;
+        }
+        .profile-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            margin: 20px auto;
+        }
+        .profile-container h2 {
+            font-weight: bold;
+            text-align: center;
+        }
+        .profile-item {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .profile-item label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .profile-item input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .edit-link {
+            color: blue;
+            text-decoration: none;
+            display: block;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .service-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            width: 40%;
+            margin: 10px;
+            text-align: center;
+        }
+        .service-card h3 {
+            font-weight: bold;
+        }
+        .book-btn {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="sidebar">
+    <a href="/loginpage">LOG IN</a>
+    <a href="/dashboard">HOME</a>
+    <a href="/services" class="active">SERVICES</a>
+    <a href="/contactus">CONTACT US</a>
+    <a href="/reviews">REVIEWS</a>
+</div>
+<div class="content">
+    <div class="header">MAID-TO-ORDER</div>
+    <div class="services-container">
+        <div class="service-card">
+            <h3>THE CHEF</h3>
+            <p>Hire one of our maids to cook for you (They will use your own ingredients and equipment)</p>
+            <button class="book-btn">PLEASE LOG IN/REGISTER</button>
+        </div>
+        <div class="service-card">
+            <h3>THE LAUNDRESS</h3>
+            <p>Hire one of our maids to do the laundry for you (They will use your equipment)</p>
+            <button class="book-btn">PLEASE LOG IN/REGISTER</button>
+        </div>
+        <div class="service-card">
+            <h3>THE MAID</h3>
+            <p>Hire one of our maids to do general home cleaning (They will use your equipment)</p>
+            <button class="book-btn">PLEASE LOG IN/REGISTER</button>
+        </div>
+        <div class="service-card">
+            <h3>THE GARDENER</h3>
+            <p>Hire one of our maids to take care of your green spaces (They will use your equipment)</p>
+            <button class="book-btn">PLEASE LOG IN/REGISTER</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

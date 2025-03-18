@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maid-To-Order</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fde8e8;
+      margin: 0;
+      padding: 0;
+    }
+    .sidebar {
+      width: 200px;
+      background-color: #f4c6c6;
+      height: 100vh;
+      position: fixed;
+      padding-top: 20px;
+    }
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #000;
+      margin: 10px;
+    }
+    .sidebar a.active {
+      background-color: white;
+      border-radius: 10px;
+    }
+    .content {
+      margin-left: 220px;
+      padding: 20px;
+      position: relative;
+    }
+    .header {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff8a8a;
+      text-shadow: 2px 2px 3px #ffb6b6;
+    }
+    .user-name {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-weight: bold;
+    }
+    .contact-container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      width: 50%;
+      margin: 50px auto;
+      text-align: center;
+    }
+    .contact-container h2 {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      margin: 20px 0;
+    }
+    .contact-item span {
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+<div class="sidebar">
+  <a href="/loginpage">LOG IN</a>
+  <a href="/dashboard">HOME</a>
+  <a href="/services">SERVICES</a>
+  <a href="/contactus" class="active">CONTACT US</a>
+  <a href="/reviews">REVIEWS</a>
+</div>
+<div class="content">
+  <div class="header">MAID-TO-ORDER</div>
+  <div class="contact-container">
+    <h2>CONTACT INFORMATION</h2>
+    <div class="contact-item">
+      <span>&#128222;</span>
+      <span>+63 921-777-9364</span>
+    </div>
+    <div class="contact-item">
+      <span>&#9993;</span>
+      <span>maidtoorder@gmail.com</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

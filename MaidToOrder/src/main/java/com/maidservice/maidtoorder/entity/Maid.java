@@ -1,14 +1,14 @@
 package com.maidservice.maidtoorder.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 
 @Data
 @Entity
 @NoArgsConstructor
+@Getter
+@Setter
 @AllArgsConstructor
 @Table(name = "maid")
 public class Maid {
@@ -36,4 +36,9 @@ public class Maid {
     @Lob
     @Column(name = "profile_picture")
     private byte[] profilePicture;
+
+    @Column(name = "profile_picture_link", length = 255)
+    private String profilePictureLink;
+
 }
+

@@ -3,56 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maid-to-Order</title>
+    <title>Maid-To-Order</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #fde8e8;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f8f9fa;
         }
-        .container {
-            text-align: center;
-            padding: 30px;
-            background: #ffffff;
-            border-radius: 10px;
-            shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 600px;
+        .sidebar {
+            width: 200px;
+            background-color: #f4c6c6;
+            height: 100vh;
+            position: fixed;
+            padding-top: 20px;
         }
-        h1 {
-            color: #28a745;
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-        p {
-            color: #343a40;
-            font-size: 18px;
-        }
-        .cta-button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #ffffff;
-            background-color: #28a745;
+        .sidebar a {
+            display: block;
+            padding: 10px;
             text-decoration: none;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            color: #000;
+            margin: 10px;
         }
-        .cta-button:hover {
-            background-color: #218838;
+        .sidebar a.active {
+            background-color: white;
+            border-radius: 10px;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+            position: relative;
+        }
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff8a8a;
+            text-shadow: 2px 2px 3px #ffb6b6;
+        }
+        .user-name {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-weight: bold;
+        }
+        .cards-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            text-align: center;
+        }
+        .card h2 {
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-<div class="container">
-    <h1>Welcome to Maid-to-Order!</h1>
-    <p>Your one-stop solution for professional and reliable maid services.</p>
-    <a href="/services" class="cta-button">Explore Services</a>
+<div class="sidebar">
+    <a href="/loginpage">LOG IN</a>
+    <a href="/dashboard" class="active">HOME</a>
+    <a href="/services">SERVICES</a>
+    <a href="/contactus">CONTACT US</a>
+    <a href="/reviews">REVIEWS</a>
+</div>
+<div class="content">
+    <div class="header">MAID-TO-ORDER</div>
+    <div class="cards-container">
+        <div class="card">
+            <h2>OUR VISION &#128065;</h2>
+            <p>To provide hard-working people more personal time by eliminating the need to do chores.</p>
+        </div>
+        <div class="card">
+            <h2>OUR MISSION &#127919;</h2>
+            <p>To provide high-quality services from professionals to our valued customers.</p>
+        </div>
+    </div>
 </div>
 </body>
 </html>
